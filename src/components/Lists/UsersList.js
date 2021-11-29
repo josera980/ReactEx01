@@ -1,11 +1,7 @@
 const UsersList = (props) => {
-  return (
-    <ul>
-      {props.items.map((user) => {
-        return user;
-      })}
-    </ul>
-  );
+  return props.items.map((user) => {
+    return <ul>{user}</ul>;
+  });
 };
 
 export default UsersList;

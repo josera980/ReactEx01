@@ -17,7 +17,7 @@ function App() {
 
   let content = <p>No users found.</p>;
 
-  if (usersInfo.length > 1) {
+  if (usersInfo.length > 0) {
     content = <UsersList items={usersInfo} />;
   }
 
