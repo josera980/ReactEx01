@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import UsersList from "./components/Lists/UsersList";
 import UserInputs from "./components/Inputs/UserInputs";
 
 function App() {
@@ -14,10 +15,16 @@ function App() {
   };
   console.log(usersInfo);
 
+  let content = <p>No users found.</p>;
+
+  if (usersInfo.length > 1) {
+    content = <UsersList items={usersInfo} />;
+  }
+
   return (
     <div>
       <UserInputs onAddUser={addUserHandler} />
-      {usersInfo}
+      {content}
     </div>
   );
 }
