@@ -1,6 +1,15 @@
+import UserItem from "./UserItem";
+
 const UsersList = (props) => {
   return props.items.map((user) => {
-    return <ul>{user}</ul>;
+    return (
+      <UserItem
+        name={user.name}
+        lastName={user.lastName}
+        age={user.age}
+        key={user.id}
+      />
+    );
   });
 };
 

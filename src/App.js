@@ -4,13 +4,11 @@ import UsersList from "./components/Lists/UsersList";
 import UserInputs from "./components/Inputs/UserInputs";
 
 function App() {
-  const [usersInfo, setUsersInfo] = useState("");
+  const [usersInfo, setUsersInfo] = useState([]);
 
   const addUserHandler = (enteredUser) => {
     setUsersInfo((prevUsers) => {
-      const updatedUsers = [...prevUsers];
-      updatedUsers.push(enteredUser);
-      return updatedUsers;
+      return [enteredUser, ...prevUsers];
     });
   };
   console.log(usersInfo);

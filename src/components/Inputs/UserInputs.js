@@ -27,27 +27,35 @@ const UserInputs = (props) => {
       return;
     }
     const userInfo = {
-      text:
-        enteredName +
-        " " +
-        enteredLastName +
-        " -- " +
-        enteredAge +
-        " years old",
+      name: enteredName,
+      lastName: enteredLastName,
+      age: enteredAge,
+      id: Math.random().toString(),
     };
-    console.log(userInfo.text);
-    props.onAddUser(userInfo.text);
+    console.log(userInfo);
+    props.onAddUser(userInfo);
+    setEnteredName("");
+    setEnteredLastName("");
+    setEnteredAge("");
   };
 
   return (
     <form onSubmit={formSubmitHandler}>
       <div>
         <label>Name:</label>
-        <input type="text" onChange={nameInputChangeHandler}></input>
+        <input
+          type="text"
+          value={enteredName}
+          onChange={nameInputChangeHandler}
+        ></input>
       </div>
       <div>
         <label>Last name:</label>
-        <input type="text" onChange={lastNameInputChangeHandler}></input>
+        <input
+          type="text"
+          value={enteredLastName}
+          onChange={lastNameInputChangeHandler}
+        ></input>
       </div>
       <div>
         <label>Age:</label>
@@ -55,6 +63,7 @@ const UserInputs = (props) => {
           type="number"
           step="1"
           min="1"
+          value={enteredAge}
           onChange={ageInputChangeHandler}
         ></input>
       </div>
