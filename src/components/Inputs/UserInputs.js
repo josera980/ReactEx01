@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import classes from "./UserInputs.module.css";
+
 const UserInputs = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredLastName, setEnteredLastName] = useState("");
@@ -40,7 +42,7 @@ const UserInputs = (props) => {
   };
 
   return (
-    <form onSubmit={formSubmitHandler}>
+    <form className={classes.form} onSubmit={formSubmitHandler}>
       <div>
         <label>Name:</label>
         <input

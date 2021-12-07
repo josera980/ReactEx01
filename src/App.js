@@ -9,7 +9,7 @@ function App() {
 
   const addUserHandler = (enteredUser) => {
     setUsersInfo((prevUsers) => {
-      return [enteredUser, ...prevUsers];
+      return [...prevUsers, enteredUser];
     });
   };
   console.log(usersInfo);
@@ -30,7 +30,8 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="App">
+      <h1>JR Exercise 1 -- KLK</h1>
       <UserInputs onAddUser={addUserHandler} />
       {content}
     </div>

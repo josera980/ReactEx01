@@ -1,0 +1,9 @@
+.form {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.form label {
+  color: white;
+  margin: 10px;
+}
