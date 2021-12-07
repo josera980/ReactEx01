@@ -1,7 +1,7 @@
 import UserItem from "./UserItem";
 
-const UsersList = (props) => {
-  return props.items.map((user) => {
+const UsersList = ({ users }) => {
+  return users.map((user) => {
     return (
       <UserItem
         name={user.name}
