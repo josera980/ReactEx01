@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.App li {
+  text-align: left;
+  background-color: white;
+  width: 50%;
+  max-width: 10rem;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
