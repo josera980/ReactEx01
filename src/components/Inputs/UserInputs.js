@@ -43,23 +43,23 @@ const UserInputs = (props) => {
 
   return (
     <form className={classes.form} onSubmit={formSubmitHandler}>
-      <div>
+      <div className={classes.control}>
         <label>Name:</label>
         <input
           type="text"
           value={enteredName}
           onChange={nameInputChangeHandler}
-        ></input>
+        />
       </div>
-      <div>
+      <div className={classes.control}>
         <label>Last name:</label>
         <input
           type="text"
           value={enteredLastName}
           onChange={lastNameInputChangeHandler}
-        ></input>
+        />
       </div>
-      <div>
+      <div className={classes.control}>
         <label>Age:</label>
         <input
           type="number"
@@ -67,9 +67,11 @@ const UserInputs = (props) => {
           min="1"
           value={enteredAge}
           onChange={ageInputChangeHandler}
-        ></input>
+        />
       </div>
-      <button type="submit">Add User</button>
+      <div>
+        <button type="submit">Add User</button>
+      </div>
     </form>
   );
 };
