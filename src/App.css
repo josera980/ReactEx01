@@ -2,11 +2,12 @@
   text-align: center;
 }
 
-.App li {
+.App ul {
   text-align: left;
-  background-color: white;
-  width: 50%;
+  width: 30%;
   max-width: 10rem;
+  background-color: white;
+  border-radius: 3.5px;
 }
 
 .App-logo {
