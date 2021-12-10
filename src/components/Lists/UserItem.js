@@ -1,6 +1,10 @@
-const UserItem = ({ name, lastName, age }) => {
+const UserItem = ({ name, lastName, age, onClick }) => {
+  const userInfo = () => {
+    onClick(name, lastName, age);
+  };
+
   return (
-    <tr>
+    <tr onClick={userInfo}>
       <td>{name}</td>
       <td>{lastName}</td>
       <td>{age}</td>

@@ -18,16 +18,7 @@ function App() {
   let content = <p>No users found.</p>;
 
   if (usersInfo.length > 0) {
-    content = (
-      <table className="table">
-        <tr>
-          <th>Name </th>
-          <th>Last Name </th>
-          <th>Age </th>
-        </tr>
-        <UsersList users={usersInfo} />
-      </table>
-    );
+    content = <UsersList users={usersInfo} />;
   }
 
   return (
